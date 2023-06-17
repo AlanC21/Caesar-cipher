@@ -31,6 +31,17 @@ const draw = () => {
     }
 }
 
+const handleResize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    col = width / font;
+    arr = [];
+
+    for(let i = 0; i < col; i++){
+        arr[i] = 1;
+    }
+}
+
 setInterval(draw, 20);
 
-//window.addEventListener("resize", () => location.reload());
+window.addEventListener("resize", () => handleResize());
