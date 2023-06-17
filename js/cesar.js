@@ -12,6 +12,14 @@ function inicio() {
     const desplazamiento = parseInt(document.getElementById("desplazamiento").value);
     document.getElementById("resultado").innerHTML = descifrar(texto, desplazamiento);
   });
+
+  const inputs = document.querySelectorAll("input[type='text'], input[type='number']");
+  inputs.forEach((input) => {
+    input.addEventListener("touchstart", (event) => {
+      event.target.focus();
+      event.preventDefault();
+    });
+  });
 }
 
 function cifrar(text, desplazamiento) {
