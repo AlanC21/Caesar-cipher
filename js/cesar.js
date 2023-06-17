@@ -2,14 +2,12 @@ window.addEventListener("load", inicio);
 
 function inicio() {
   document.querySelector("#cifrar").addEventListener("click", () => {
-    event.preventDefault();
     const texto = document.getElementById("texto").value;
     const desplazamiento = parseInt(document.getElementById("desplazamiento").value);
     document.getElementById("resultado").innerHTML = cifrar(texto, desplazamiento);
   });
 
   document.querySelector("#descifrar").addEventListener("click", () => {
-    event.preventDefault();
     const texto = document.getElementById("texto").value;
     const desplazamiento = parseInt(document.getElementById("desplazamiento").value);
     document.getElementById("resultado").innerHTML = descifrar(texto, desplazamiento);
